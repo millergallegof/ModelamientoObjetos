@@ -1,4 +1,4 @@
-package ejercicio4;
+package ejercicio5;
 
 /**
  * Abstract class which is a template for any vehicle that currently exists, it
@@ -121,7 +121,8 @@ public abstract class Vehiculo implements MetVehiculo {
     }
 
     /**
-     * Method by which the current velocity becomes 0, has exceptions when the velocity is 0
+     * Method by which the current velocity becomes 0, has exceptions when the
+     * velocity is 0
      *
      *
      *
@@ -142,7 +143,9 @@ public abstract class Vehiculo implements MetVehiculo {
     }
 
     /**
-     * Method by which the object is moved to the right, using the Cartesian plane as an example where the movement to the right is movement towards the x-axis positive part.
+     * Method by which the object is moved to the right, using the Cartesian
+     * plane as an example where the movement to the right is movement towards
+     * the x-axis positive part.
      *
      *
      *
@@ -163,7 +166,9 @@ public abstract class Vehiculo implements MetVehiculo {
     }
 
     /**
-     * Method with which the object is displaced to the left, we take as an example the Cartesian plane where the movement to the left is movement towards the x-axis negative part.
+     * Method with which the object is displaced to the left, we take as an
+     * example the Cartesian plane where the movement to the left is movement
+     * towards the x-axis negative part.
      *
      *
      *
@@ -185,7 +190,9 @@ public abstract class Vehiculo implements MetVehiculo {
     }
 
     /**
-     * Method with which the object is moved upwards, the Cartesian plane is taken as an example where the movement upwards is movement towards the axis and positive part.
+     * Method with which the object is moved upwards, the Cartesian plane is
+     * taken as an example where the movement upwards is movement towards the
+     * axis and positive part.
      *
      *
      *
@@ -206,7 +213,9 @@ public abstract class Vehiculo implements MetVehiculo {
     }
 
     /**
-     * Method with which the object is moved down, the Cartesian plane is taken as an example where the movement down is movement towards the axis and negative part.
+     * Method with which the object is moved down, the Cartesian plane is taken
+     * as an example where the movement down is movement towards the axis and
+     * negative part.
      *
      *
      *

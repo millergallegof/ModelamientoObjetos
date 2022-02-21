@@ -1,11 +1,8 @@
-package ejercicio4;
-
-import ejercicio4.MetVehiculo;
-import ejercicio4.Vehiculo;
+package ejercicio5;
 
 /**
- * Class which is inheriting the abstract class Ferry and is implementing the
- * MetVehicle interface, it is the template for a ferry which has specific
+ * Class that inherits vehicle methods and attributes and implements the
+ * MetVehicle interface, it is the template of a car that has specific
  * attributes of this vehicle.
  *
  *
@@ -16,23 +13,19 @@ import ejercicio4.Vehiculo;
  * @since Available from version 1.
  *
  */
-public class Ferry extends Vehiculo implements MetVehiculo {
+public class Coche extends Vehiculo implements MetVehiculo {
 
-    private String tipoCarga;
-    private String color;
-
-    public Ferry(String numMatricula) {
-        super(numMatricula);
-    }
+    private Integer numPuertas;
+    private String tipoTransmision;
 
     /**
-     * constructor with the main elements to create an object of type ferry,
-     * simplifies the creation of the object since it asks for key elements as
-     * arguments.
+     * constructor with the main elements to create an object of type car,
+     * simplifies the creation of the object since it asks for the key elements
+     * as arguments.
      *
-     * @param tipoCarga String data type indicates if they are people, vehicles
-     * or other type of cargo.
-     * @param color object color
+     * @param numPuertas specifies the number of gates the object has.
+     * @param tipoTransmision string data type that specifies a specific
+     * behavior.
      * @param numMatricula single string data as object
      *
      * @author Miller Esteban Gallego Forero - miller.gallegof@gmail.com
@@ -43,10 +36,10 @@ public class Ferry extends Vehiculo implements MetVehiculo {
      *
      *
      */
-    public Ferry(String tipoCarga, String color, String numMatricula) {
+    public Coche(Integer numPuertas, String tipoTransmision, String numMatricula) {
         super(numMatricula);
-        this.tipoCarga = tipoCarga;
-        this.color = color;
+        this.numPuertas = numPuertas;
+        this.tipoTransmision = tipoTransmision;
     }
 
     /**
@@ -54,9 +47,9 @@ public class Ferry extends Vehiculo implements MetVehiculo {
      * object, constructor which stores elements with which to perform more
      * specific methods.
      *
-     * @param tipoCarga String data type indicates if they are people, vehicles
-     * or other type of cargo.
-     * @param color object color.
+     * @param numPuertas specifies the number of gates the object has.
+     * @param tipoTransmision string data type that specifies a specific
+     * behavior.
      * @param marca given string type ferry brand
      * @param modelo given string type or modelo of ferry
      * @param numPasajeros data type integer number of passengers currently in
@@ -85,13 +78,13 @@ public class Ferry extends Vehiculo implements MetVehiculo {
      *
      *
      */
-    public Ferry(String tipoCarga, String color, String marca, String modelo, Integer numPasajeros, boolean precensiaTripulacion,
-            boolean existeRuedas, String fechaMatricula, String medioDeDesplazamiento, String tipoDeFrenos, Double velocidadMax,
-            String numMatricula, Double valorAceleracion) {
-        super(marca, modelo, numPasajeros, precensiaTripulacion, existeRuedas, fechaMatricula, medioDeDesplazamiento, tipoDeFrenos,
-                velocidadMax, numMatricula, valorAceleracion);
-        this.tipoCarga = tipoCarga;
-        this.color = color;
+    public Coche(Integer numPuertas, String tipoTransmision, String marca, String modelo, Integer numPasajeros,
+            boolean precensiaTripulacion, boolean existeRuedas, String fechaMatricula, String medioDeDesplazamiento,
+            String tipoDeFrenos, Double velocidadMax, String numMatricula, Double valorAceleracion) {
+        super(marca, modelo, numPasajeros, precensiaTripulacion, existeRuedas, fechaMatricula, medioDeDesplazamiento,
+                tipoDeFrenos, velocidadMax, numMatricula, valorAceleracion);
+        this.numPuertas = numPuertas;
+        this.tipoTransmision = tipoTransmision;
     }
 
     /**
@@ -109,23 +102,23 @@ public class Ferry extends Vehiculo implements MetVehiculo {
      */
     @Override
     public String mostrarDatos() {
-        return "Ferry{" + "Numero de matricula: " + getNumMatricula() + ", con tipoCarga: " + tipoCarga + ", de color: " + color + '}';
+        return "Coche{" + "numPuertas=" + numPuertas + ", tipoTransmision=" + tipoTransmision + '}';
     }
 
-    public String getTipoCarga() {
-        return tipoCarga;
+    public Integer getNumPuertas() {
+        return numPuertas;
     }
 
-    public void setTipoCarga(String tipoCarga) {
-        this.tipoCarga = tipoCarga;
+    public void setNumPuertas(Integer numPuertas) {
+        this.numPuertas = numPuertas;
     }
 
-    public String getColor() {
-        return color;
+    public String getTipoTransmision() {
+        return tipoTransmision;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setTipoTransmision(String tipoTransmision) {
+        this.tipoTransmision = tipoTransmision;
     }
 
 }

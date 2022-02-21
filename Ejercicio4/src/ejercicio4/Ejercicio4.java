@@ -146,7 +146,7 @@ public class Ejercicio4 {
                         System.out.println("--------------------------------");
                         break;
                     case 5:
-                        contador = 0;
+                                                contador = 0;
                         iterator = listaFerrys.iterator();
                         encontro = false;
 
@@ -175,31 +175,42 @@ public class Ejercicio4 {
                             System.out.println("6. cacular distancia");
                             System.out.println("Precione 0 para salir del programa");
                             op2 = scanner.nextInt();
-                             /* The different methods of the object are used to allow the user to interact with the object. */
-                            switch (op2) {
-                                case 1:
-                                    encontrado.acelerar();
-                                    break;
-                                case 2:
-                                    encontrado.moverDerecha();
-                                    break;
-                                case 3:
-                                    encontrado.moverIzquierda();
-                                    break;
-                                case 4:
-                                    encontrado.moverAbajo();
-                                    break;
-                                case 5:
-                                    encontrado.moverArriba();
-                                    break;
-                                case 6:
-                                    System.out.println("-----------------------------------------------------------------");
-                                    System.out.println("la distancia recorrida es: " + encontrado.calcularDistancia());
-                                    System.out.println("-----------------------------------------------------------------");
-                                    break;
-                                default:
-                                    System.out.println("Seleccione una opcion correcta");
-                                    break;
+                            /* The different methods of the object are used to allow the user to interact with the object. */
+                            try {
+
+                                switch (op2) {
+                                    case 1:
+                                        encontrado.acelerar();
+                                        break;
+                                    case 2:
+                                        encontrado.moverDerecha();
+                                        break;
+                                    case 3:
+                                        encontrado.moverIzquierda();
+                                        break;
+                                    case 4:
+                                        encontrado.moverAbajo();
+                                        break;
+                                    case 5:
+                                        encontrado.moverArriba();
+                                        break;
+                                    case 6:
+                                        System.out.println("-----------------------------------------------------------------");
+                                        System.out.println("la distancia recorrida es: " + encontrado.calcularDistancia());
+                                        System.out.println("-----------------------------------------------------------------");
+                                        break;
+                                    default:
+                                        System.out.println("Seleccione una opcion correcta");
+                                        break;
+
+                                }
+                            } catch (Exception e) {
+                                System.out.println("-------------------------------------------------------------");
+                                System.out.println("                             ALERT");
+                                System.out.println("-------------------------------------------------------------");
+                                System.out.println("                           " + e.getMessage());
+
+                                break;
                             }
                         } while (op2 != 0);
                         break;

@@ -1,11 +1,8 @@
-package ejercicio4;
-
-import ejercicio4.MetVehiculo;
-import ejercicio4.Vehiculo;
+package ejercicio5;
 
 /**
- * Class which is inheriting the abstract class Ferry and is implementing the
- * MetVehicle interface, it is the template for a ferry which has specific
+ * Class that inherits vehicle methods and attributes and implements the
+ * MetVehicle interface, it is the template of a bicycle that has specific
  * attributes of this vehicle.
  *
  *
@@ -16,23 +13,20 @@ import ejercicio4.Vehiculo;
  * @since Available from version 1.
  *
  */
-public class Ferry extends Vehiculo implements MetVehiculo {
+public class Bicicleta extends Vehiculo implements MetVehiculo {
 
-    private String tipoCarga;
-    private String color;
-
-    public Ferry(String numMatricula) {
-        super(numMatricula);
-    }
+    private boolean tieneCambios;
+    private boolean esDeMontana;
 
     /**
-     * constructor with the main elements to create an object of type ferry,
-     * simplifies the creation of the object since it asks for key elements as
-     * arguments.
+     * constructor with the main elements to create an object of type bicycle,
+     * it simplifies the creation of the object since it asks for the key
+     * elements as arguments.
      *
-     * @param tipoCarga String data type indicates if they are people, vehicles
-     * or other type of cargo.
-     * @param color object color
+     * @param tieneCambios Data of type boolean that indicates the presence of
+     * changes.
+     * @param esDeMontana Data Boolean type indicating whether it is a specific
+     * type of object.
      * @param numMatricula single string data as object
      *
      * @author Miller Esteban Gallego Forero - miller.gallegof@gmail.com
@@ -43,10 +37,10 @@ public class Ferry extends Vehiculo implements MetVehiculo {
      *
      *
      */
-    public Ferry(String tipoCarga, String color, String numMatricula) {
+    public Bicicleta(boolean tieneCambios, boolean esDeMontana, String numMatricula) {
         super(numMatricula);
-        this.tipoCarga = tipoCarga;
-        this.color = color;
+        this.tieneCambios = tieneCambios;
+        this.esDeMontana = esDeMontana;
     }
 
     /**
@@ -54,9 +48,10 @@ public class Ferry extends Vehiculo implements MetVehiculo {
      * object, constructor which stores elements with which to perform more
      * specific methods.
      *
-     * @param tipoCarga String data type indicates if they are people, vehicles
-     * or other type of cargo.
-     * @param color object color.
+     * @param tieneCambios Data of type boolean that indicates the presence of
+     * changes
+     * @param esDeMontana Data Boolean type indicating whether it is a specific
+     * type of object.
      * @param marca given string type ferry brand
      * @param modelo given string type or modelo of ferry
      * @param numPasajeros data type integer number of passengers currently in
@@ -85,13 +80,10 @@ public class Ferry extends Vehiculo implements MetVehiculo {
      *
      *
      */
-    public Ferry(String tipoCarga, String color, String marca, String modelo, Integer numPasajeros, boolean precensiaTripulacion,
-            boolean existeRuedas, String fechaMatricula, String medioDeDesplazamiento, String tipoDeFrenos, Double velocidadMax,
-            String numMatricula, Double valorAceleracion) {
-        super(marca, modelo, numPasajeros, precensiaTripulacion, existeRuedas, fechaMatricula, medioDeDesplazamiento, tipoDeFrenos,
-                velocidadMax, numMatricula, valorAceleracion);
-        this.tipoCarga = tipoCarga;
-        this.color = color;
+    public Bicicleta(boolean tieneCambios, boolean esDeMontana, String marca, String modelo, Integer numPasajeros, boolean precensiaTripulacion, boolean existeRuedas, String fechaMatricula, String medioDeDesplazamiento, String tipoDeFrenos, Double velocidadMax, String numMatricula, Double valorAceleracion) {
+        super(marca, modelo, numPasajeros, precensiaTripulacion, existeRuedas, fechaMatricula, medioDeDesplazamiento, tipoDeFrenos, velocidadMax, numMatricula, valorAceleracion);
+        this.tieneCambios = tieneCambios;
+        this.esDeMontana = esDeMontana;
     }
 
     /**
@@ -109,23 +101,23 @@ public class Ferry extends Vehiculo implements MetVehiculo {
      */
     @Override
     public String mostrarDatos() {
-        return "Ferry{" + "Numero de matricula: " + getNumMatricula() + ", con tipoCarga: " + tipoCarga + ", de color: " + color + '}';
+        return "Bicicleta{" + "tieneCambios=" + tieneCambios + ", esDeMonta\u00f1a=" + esDeMontana + '}';
     }
 
-    public String getTipoCarga() {
-        return tipoCarga;
+    public boolean isTieneCambios() {
+        return tieneCambios;
     }
 
-    public void setTipoCarga(String tipoCarga) {
-        this.tipoCarga = tipoCarga;
+    public void setTieneCambios(boolean tieneCambios) {
+        this.tieneCambios = tieneCambios;
     }
 
-    public String getColor() {
-        return color;
+    public boolean isEsDeMontaña() {
+        return esDeMontana;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setEsDeMontaña(boolean esDeMontaña) {
+        this.esDeMontana = esDeMontaña;
     }
 
 }

@@ -1,7 +1,4 @@
-package ejercicio4;
-
-import ejercicio4.MetVehiculo;
-import ejercicio4.Vehiculo;
+package ejercicio5;
 
 /**
  * Class which is inheriting the abstract class Ferry and is implementing the
